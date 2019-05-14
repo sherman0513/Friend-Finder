@@ -24,7 +24,7 @@ module.exports = (app) => {
         friendArray.forEach(result => {
             console.log(result.name);
             total = 0;
-            let user;
+            let newUser;
             result.forEach(res => {
                 total += Math.abs(parseInt(score) - parseInt(res.score));
                 if (total <= match.difference) {
