@@ -1,4 +1,4 @@
-const friendArray = require('../data/friends.js');
+const friendArray = require('../data/friends');
 
 // routes for friend.js file
 
