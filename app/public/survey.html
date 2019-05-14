@@ -191,9 +191,8 @@
           $("#question10").val()
         ]
       };
-      let currentURL = window.location.origin;
       // Ajax call for receiving response after POST req
-      $.post(currentURL + "/api/friends", newUser, (data) => {
+      $.post("/api/friends", newUser, (data) => {
         $("#bestFriend").text(data.name);
         $("#bestFriendPhoto").attr("src", data.photo);
         $("#bestFriendModal").modal();

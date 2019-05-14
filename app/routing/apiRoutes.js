@@ -25,19 +25,20 @@ module.exports = (app) => {
             console.log(result.name);
             total = 0;
             let user;
-            for (user in result) {
-                total += Math.abs(parseInt(score) - parseInt(result.score));
+            result.forEach(res => {
+                total += Math.abs(parseInt(score) - parseInt(res.score));
                 if (total <= match.difference) {
-                    match.name = result.name;
-                    match.photo = result.photo;
+                    match.name = res.name;
+                    match.photo = res.photo;
                     match.difference = total;
                 }
             }
-        })
+            )
 
-        friendArray.push(user);
+            result.push(newUser);
 
-        res.json(match);
+            res.json(match);
+        });
+
     });
-
 };
