@@ -1,4 +1,4 @@
-let friendArray = require('../data/friends');
+const friendArray = require('../data/friends.js');
 
 // routes for friend.js file
 
@@ -7,11 +7,11 @@ module.exports = (app) => {
         res.json(friendArray);
     });
 
-    app.post('/api/friends', (req, res) => {
-        //run through friend array linked to the survey questions
-        // need to complete function funs through every friend and pairs with the correct person based on answers
+    // app.post('/api/friends', (req, res) => {
+    //     //run through friend array linked to the survey questions
+    //     // need to complete function funs through every friend and pairs with the correct person based on answers
     
 
-    });
+    // });
 
 };
